@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    --blue: #273443;
+    --blue-tr: #27344363;
+    --red: #F64C4C;
+    --orange: #F6A84C;
+    --yellow: #FEC957;
+    --yellow-tr: #fec95784;
+    --brown: #4E2A07;
+    --creme: #FCF1DA;
+    --white: #FBFBFB;
+}
+
+
+/* ________________________________MULTIPLE USAGES__________________________________ */
+
+.absolute{
+    position: absolute;
+}
+
+.gradient{
+    background: rgb(255,186,122);
+    background: linear-gradient(32deg, rgba(255,186,122,1) 20%, rgba(255,214,129,1) 55%, rgba(255,232,184,1) 100%);
+}
+
+/* _______________________________REGULAR____________________________ */
+
+body{
+    overflow: hidden;
+    background-color: var(--yellow-tr);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content{
+    width: 16rem;
+    height: 31rem;
+    border-radius: 2rem;
+    background-color: var(--white);
+    border: 0.4rem solid var(--brown);
+    position: relative;
+}
+
+.semicircle, .circle{
+    opacity: 0.2;
+    z-index: -100;
+}
+
+.semicircle{
+    top: -35rem;
+    left: 0;
+    width: 35rem;
+}
+
+.circle{
+    bottom: -20rem;
+    right: 0;
+    width: 35rem;
+}
+
+.navbar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 1.6rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px -1px 5px 1px var(--brown);
+}
+
+.navbar a img{
+    margin-top: 3px;
+    width: 2rem;
+}
+
+header{
+    height: 3rem;
+    background-color: red;
+    border-radius: 1.6rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0px 1px 5px 1px var(--brown);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.stars img{
+    width: 1rem
+}
+
+.stars img:nth-child(1){ margin-left: 2rem; }
+.stars img:nth-child(2){ margin-left: 2rem; }
+.stars img:nth-child(3){ margin-left: -0.8rem; }
+.stars img:nth-child(4){ margin-left: 2rem; }
+.stars img:nth-child(5){ margin-left: -0.8rem; }
+.stars img:nth-child(6){ margin-left: -0.8rem; }
+
+.progress-bar{
+    width: 11rem;
+    height: 1rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    border: 2px solid var(--blue);
+    box-shadow: inset 0 0 1px 1px var(--blue-tr);
+    position: relative;
+}
+
+.progress{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+    background-color: var(--yellow);
+    border: 2px solid var(--blue);
+}
+
+.profile-pic{
+    width: 2.5rem;
+}
+

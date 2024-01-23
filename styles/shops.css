@@ -1,0 +1,29 @@
+ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+li{
+    margin-top: 0.9rem;
+    width: 14rem;
+    height: 21rem;
+    background-color: var(--creme);
+    box-shadow: 0 0 5px 1px var(--blue-tr);
+    border-radius: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 24.5rem;
+}
+
+main::-webkit-scrollbar {
+    width: 0px;
+}
+  
+main::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
