@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHOPS-ForFood-MVP</title>
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/shops.css">
+    <link rel="stylesheet" href="../styles/good.css">
 </head>
 <body>
     <div class="center">
@@ -29,12 +29,7 @@
             </header>
 
             <main>
-                <ul>
-                    <li>
-                        <a href="kavakavezo.html">kava kave</a>
-                    </li>
-                    <li></li>
-                </ul>
+                <h1 class="name"></h1>
             </main>
 
             <div class="navbar gradient">
@@ -51,5 +46,16 @@
     <img class="absolute circle" src="../assets/semicircle.svg" alt="">
 
     <script src="../app.js"></script>
+
+    <script>
+
+        const name = document.querySelector('.name');
+
+        //getting the query string from url
+        const queryString = window.location.search;
+        const params = new URLSearchParams(queryString);
+        const g = params.get('g');
+        name.innerHTML = g;
+    </script>
 </body>
 </html>
