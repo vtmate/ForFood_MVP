@@ -124,7 +124,7 @@ header{
     top: -2px;
     left: -2px;
     height: 1rem;
-    width: 1rem;
+    width: 20%;
     border-radius: 1rem;
     background-color: var(--yellow);
     border: 2px solid var(--blue);
@@ -134,3 +134,14 @@ header{
     width: 2.5rem;
 }
 
+.reset{
+    position: absolute;
+    bottom: -2.5rem;
+    left: 0;
+    background-color: var(--creme);
+    color: var(--blue);
+    height: 2rem;
+    width: 4rem;
+    border-radius: 1rem;
+    border: solid 2px var(--blue);
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CART-ForFood-MVP</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/cart.css">
 </head>
 <body>
     <div class="center">
@@ -27,6 +28,16 @@
             </header>
 
 
+            <main>
+                <div class="noitems">
+                    <h2>there are no items in your cart yet</h2>
+                </div>
+                <div class="items hidden">
+                    there are items
+                </div>
+            </main>
+
+
             <div class="navbar gradient">
                 <a href="shops.html"><img src="../assets/shops.svg" alt=""></a>
                 <a href="goods.html"><img src="../assets/goods.svg" alt=""></a>
@@ -40,5 +51,20 @@
     <img class="absolute circle" src="../assets/semicircle.svg" alt="">
 
     <script src="../app.js"></script>
+    <script>
+        
+        const items = document.querySelector('.items');
+        const noitems = document.querySelector('.noitems');
+        
+        var cartstring = localStorage.getItem('cart') || JSON.stringify([]);
+        var cart = JSON.parse(cartstring);
+
+        if(cart.length != 0){
+            items.classList.remove('hidden');
+            noitems.classList.add('hidden');
+        }
+
+
+    </script>
 </body>
 </html>
