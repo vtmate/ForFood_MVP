@@ -145,3 +145,11 @@ header{
     border-radius: 1rem;
     border: solid 2px var(--blue);
 }
+
+a{
+    text-decoration: none;
+}
+
+a:active, a:visited, a{
+    color: var(--blue);
+}
