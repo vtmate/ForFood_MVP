@@ -29,10 +29,40 @@
             </header>
 
             <main>
-                <h1 class="name"></h1>
-                <button onclick="addToCart()">add to cart</button>
+                <div class="product-holder bg">
+                    <div class="product bg" href="">
+                        <img class="product-img" src="" alt="">
+                        <div class="product-info">
+                    <h2 class="name"></h2>
+                        <div class="price">
+                            <img class="coin" src="../assets/coin.svg" alt="">
+                            <p class="price-tag"></p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="grid">
+                        <div class="map">
+                            <div>
+                                <img src="../assets/map.png" alt="">
+                                <p>Megtekintés a térképen</p>
+                            </div>
+                        </div>
+                        <div class="shop">
+                            <img class="location-img" src="" alt="">
+                            <p class="located-at"></p>
+                        </div>
+                        <div class="star">
+                            <p class="star-points"></p>
+                            <img src="../assets/progress-star.svg" alt="">
+                        </div>
+                        <!-- <a href="cart.html" class="cart-add"> -->
+                        <a href="" class="cart-add">
+                            <img class="cart-add-img" src="../assets/cart-add.png" alt="">
+                        </a>
+                    </div>
+                </div>
             </main>
-
+            
             <div class="navbar gradient">
                 <a href="shops.html"><img src="../assets/shops.svg" alt=""></a>
                 <a href="goods.html"><img src="../assets/goods-s.svg" alt=""></a>
@@ -57,6 +87,42 @@
         const params = new URLSearchParams(queryString);
         const g = params.get('g');
         name.innerHTML = g;
+
+        var prices = {
+            'cappuccino': 1200,
+            'ice-coffee': 1300,
+            'cake': 1800,
+            'pudding': 1600,
+            'ice-cream': 1400
+        };
+
+        var loc = {
+            'cappuccino': ['kava-kavezo.png', 'Káva Kávézó'],
+            'ice-coffee': ['kava-kavezo.png', 'Káva Kávézó'],
+            'cake': ['peter-pekarui.png', 'Péter Pékárúi'],
+            'pudding': ['peter-pekarui.png', 'Péter Pékárúi'],
+            'ice-cream': ['peter-pekarui.png', 'Péter Pékárúi']
+        };
+
+        const image = document.querySelector('.product-img');
+        image.src = '../assets/' + g + '.png';
+
+        const priceTag = document.querySelector('.price-tag');
+        priceTag.innerText = prices[g] + "Ft";
+
+        const locatedAt = document.querySelector('.located-at');
+        locatedAt.innerText = 'Elérhető itt: ' + loc[g][1];
+
+        const locationImg = document.querySelector('.location-img');
+        locationImg.src = '../assets/' + loc[g][0];
+
+        const starPoints = document.querySelector('.star-points');
+        const starPoint = prices[g] / 100;
+        starPoints.innerText = starPoint;
+
+        const cartAdd = document.querySelector('.cart-add');
+        cartAdd.addEventListener('click', addToCart);
+
     </script>
 </body>
 </html>

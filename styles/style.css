@@ -153,3 +153,9 @@ a{
 a:active, a:visited, a{
     color: var(--blue);
 }
+
+.bg{
+    border-radius: 1rem;
+    box-shadow: 0 0 2px 1px var(--blue-tr);
+    background-color: var(--creme);
+}

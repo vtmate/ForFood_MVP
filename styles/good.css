@@ -1,0 +1,92 @@
+h2{
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.product-holder{
+    width: 14.5rem;
+    margin-top: 2rem;
+    height: 20rem;
+}
+
+.product{
+    display: flex;
+    width: 12rem;
+    margin: auto;
+    margin-top: 1.7rem;
+    margin-bottom: 2rem;
+    padding: 0.2rem;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.price{
+    display: flex;
+}
+
+.product-img{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+}
+
+.coin{
+    width: 1.2rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 6rem 6rem;
+    margin: auto;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.star{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star p{
+    font-size: 1.6rem;
+    margin-right: 0.2rem;
+}
+
+.star img{
+    width: 2rem;
+}
+
+.map, .shop, .star, .cart-add {
+    border-radius: 1rem;
+    box-shadow: 0 0 2px 1px var(--blue-tr);
+    background-color: var(--creme);
+    /* display: flex;
+    justify-content: center; */
+}
+
+.map img, .shop img{
+    width: 4rem;
+    margin-left: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.map p, .shop p{
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+.cart-add-img{
+    margin-left: 1.5rem;
+    width: 3rem;
+    padding: 0.3rem 0;
+}

@@ -1,0 +1,40 @@
+h2{
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.goods-holder{
+    margin-top: 0.5rem;
+}
+
+.product{
+    display: flex;
+    width: 14rem;
+    margin: auto;
+    margin-top: 0.5rem;
+    padding: 0.2rem;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.price{
+    display: flex;
+}
+
+.product-img{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+}
+
+.coin{
+    width: 1.2rem;
+}
+
+.arrow{
+    width: 2rem;
+    margin-left: auto;
+}

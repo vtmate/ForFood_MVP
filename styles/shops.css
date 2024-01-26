@@ -73,7 +73,6 @@ h2{
     height: 2rem;
     width: 13.5rem;
     height: 18rem;
-    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,10 +80,4 @@ h2{
 
 .video img{
     opacity: 0.4;
-}
-
-.bg{
-    border-radius: 1rem;
-    box-shadow: 0 0 2px 1px var(--blue-tr);
-    background-color: var(--creme);
 }
