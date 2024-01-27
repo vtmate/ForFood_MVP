@@ -1,3 +1,48 @@
+main {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 24.5rem;
+}
+
+main::-webkit-scrollbar {
+    width: 0px;
+}
+  
+main::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+h1{
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.noitems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    margin-top: 1.5rem;
+    margin-inline: 1rem;
+    padding: 1rem;
+}
+
 .hidden{
     display: none;
+}
+
+.noitems h2{
+    text-align: center;
+    opacity: 0.4;
+}
+
+.product{
+    margin: 0rem 1rem 0.5rem 1rem;
+}
+
+.items{
+    margin-top: 1rem;
 }

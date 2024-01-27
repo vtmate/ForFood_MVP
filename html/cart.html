@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CART-ForFood-MVP</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/good.css">
     <link rel="stylesheet" href="../styles/cart.css">
+    <link rel="icon" type="image/x-icon" href="../assets/kava-kavezo.png">
 </head>
 <body>
     <div class="center">
@@ -29,11 +31,12 @@
 
 
             <main>
-                <div class="noitems">
-                    <h2>there are no items in your cart yet</h2>
+                <div class="noitems bg">
+                    <h2>Még nincs semmi a kosaradban</h2>
                 </div>
-                <div class="items hidden">
-                    there are items
+                <div class="items hidden bg">
+                    <h1>Kosarad tartalma</h1>
+                    <div class="item-holder"></div>
                 </div>
             </main>
 
@@ -62,9 +65,75 @@
         if(cart.length != 0){
             items.classList.remove('hidden');
             noitems.classList.add('hidden');
+
+            const itemHolder = document.querySelector('.item-holder');
+            
+            var prices = {
+                'cappuccino': 1200,
+                'ice-coffee': 1300,
+                'cake': 1800,
+                'pudding': 1600,
+                'ice-cream': 1400
+            };
+
+            var loc = {
+                'cappuccino': ['kava-kavezo.png', 'Káva Kávézó'],
+                'ice-coffee': ['kava-kavezo.png', 'Káva Kávézó'],
+                'cake': ['sususutijei.png', 'Süsü Sütijei'],
+                'pudding': ['sususutijei.png', 'Süsü Sütijei'],
+                'ice-cream': ['sususutijei.png', 'Süsü Sütijei']
+            };
+            
+            // const image = document.querySelector('.product-img');
+            // image.src = '../assets/' + g + '.png';
+            
+            // const priceTag = document.querySelector('.price-tag');
+            // priceTag.innerText = prices[g] + "Ft";
+            
+            cart.forEach(item => {
+                
+                const product = document.createElement('div');
+                product.classList.add('product');
+                product.classList.add('bg');
+                const productImg = document.createElement('img');
+                productImg.classList.add('product-img');
+                productImg.src = '../assets/' + item + '.png';
+                const productInfo = document.createElement('div');
+                productInfo.classList.add('product-info');
+                const name = document.createElement('h2');
+                name.classList.add('name');
+                name.innerText = item;
+                const price = document.createElement('div');
+                price.classList.add('price');
+                const coin = document.createElement('img');
+                coin.classList.add('coin');
+                coin.src = '../assets/coin.svg';
+                const priceTag = document.createElement('p');
+                priceTag.classList.add('price-tag');
+                priceTag.innerText = prices[item] + "Ft";
+                // <div class="product bg">
+                //     <img class="product-img" src="" alt="">
+                //     <div class="product-info">
+                //         <h2 class="name"></h2>
+                //         <div class="price">
+                //             <img class="coin" src="../assets/coin.svg" alt="">
+                //             <p class="price-tag"></p>
+                //         </div>
+                //     </div>
+                // </div>
+                price.append(coin);
+                price.append(priceTag);
+                productInfo.append(name);
+                productInfo.append(price);
+                product.append(productImg);
+                product.append(productInfo);
+                itemHolder.append(product);
+            });
+            
+            
+            //lehet azt, hogy itt eltüntetem a menüsort (amikor visszamegyek a "boltba vásárolni, akkor ott is kellene tüntetni")
+            //vagy bármilyen új lapra lépésnél rákérdezek, h űríti-e a kosár tartalmát (kivéve ha az adott "boltba" megy vissza)
         }
-
-
     </script>
 </body>
 </html>

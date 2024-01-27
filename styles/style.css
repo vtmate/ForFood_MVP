@@ -146,6 +146,10 @@ header{
     border: solid 2px var(--blue);
 }
 
+.reset:hover{
+    cursor: pointer;
+}
+
 a{
     text-decoration: none;
 }
