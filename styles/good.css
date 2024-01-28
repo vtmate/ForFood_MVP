@@ -17,9 +17,9 @@ main{
 .product{
     display: flex;
     width: 12rem;
-    margin: auto;
     margin-top: 1.7rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
+    margin-left: 2.5rem;
     padding: 0.2rem;
 }
 
@@ -40,6 +40,7 @@ main{
 
 .coin{
     width: 1.2rem;
+    margin-right: 0.2rem;
 }
 
 .grid{
@@ -67,10 +68,8 @@ main{
 
 .map, .shop, .star, .cart-add {
     border-radius: 1rem;
-    box-shadow: 0 0 2px 1px var(--blue-tr);
+    box-shadow: 0 0 2px 1px var(--brown-tr);
     background-color: var(--creme);
-    /* display: flex;
-    justify-content: center; */
 }
 
 .map img, .shop img{
@@ -89,4 +88,8 @@ main{
     margin-left: 1.5rem;
     width: 3rem;
     padding: 0.3rem 0;
+}
+
+.located-at{
+    padding-inline: 0.5rem;
 }

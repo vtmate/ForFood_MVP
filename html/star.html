@@ -37,38 +37,42 @@
                         <p class="pay-points"></p>
                     </div>
                     <div class="free-items bg">
-                        <button onclick="getFreeItem(120)" class="free-button">
-                            <img class="free-good" src="../assets/cappuccino.png" alt="">
+                        <button onclick="getFreeItem(80)" class="free-button">
+                            <img class="free-good" src="../assets/biscuit.png" alt="">
                             <div>
-                                <h2>cappuccino</h2>
+                                <h2>biscuit</h2>
                                 <div class="right">
                                     <img class="free-star" src="../assets/progress-star.svg" alt="">
-                                    <p>120</p>
+                                    <p>80</p>
                                 </div>
                             </div>
                         </button>
                     </div>
 
-                    <p class="all-points"></p>
+                    <div class="inline bg">
+                        <p>Összes csillagod: </p>
+                        <img class="inline-star" src="../assets/progress-star.svg" alt="">
+                        <p class="all-points"></p>
+                    </div>
                     <div class="tiers">
                         <div class="tier bg">
                             <div>
                                 <img class="tier-star" src="../assets/progress-star.svg" alt="">
-                                <h3>Kulináris Kalandor - 100p</h3>
+                                <h3>Kulináris Kalandor - 100 csillag</h3>
                             </div>
                             <div>
                                 <img class="gift" src="../assets/gift.svg" alt="">
-                                <p>ingyen +100 pont</p>
+                                <p>ingyen +100 csillag</p>
                             </div>
                             <div>
                                 <img class="gift" src="../assets/gift.svg" alt="">
-                                <p>Mostantól 1.5x annyi pont</p>
+                                <p>Mostantól 1.5x annyi csillag</p>
                             </div>
                         </div>
                         <div class="tier bg">
                             <div>
                                 <img class="tier-star" src="../assets/progress-star.svg" alt="">
-                                <h3>Desszert Díjas - 150 pont</h3>
+                                <h3>Desszert Díjas - 150 csillag</h3>
                             </div>
                             <div>
                                 <img class="gift" src="../assets/gift.svg" alt="">
@@ -78,11 +82,11 @@
                         <div class="tier bg">
                             <div>
                                 <img class="tier-star" src="../assets/progress-star.svg" alt="">
-                                <h3>Gasztronómiai Gróf - 200p</h3>
+                                <h3>Gasztronómiai Gróf - csillag</h3>
                             </div>
                             <div>
                                 <img class="gift" src="../assets/gift.svg" alt="">
-                                <p>Mostantól 2.5x annyi pont</p>
+                                <p>Mostantól 2.5x annyi csillag</p>
                             </div>
                         </div>
                     </div>
@@ -108,7 +112,7 @@
                 localPoints -= price;
                 localStorage.setItem('points', localPoints);
                 console.log("megvetted");
-                payPoints.innerText = 'levásárolható csillagok: ' + localPoints;
+                payPoints.innerText = localPoints;
 
             } else {
                 console.log("nincs elég pénzed");
@@ -122,7 +126,7 @@
         payPoints.innerText = localPoints;
 
         const allPointsP = document.querySelector('.all-points');
-        allPointsP.innerText = 'összes csillagod: ' + allPoints;
+        allPointsP.innerText = allPoints;
 
     </script>
 </body>

@@ -8,7 +8,7 @@ li a{
     width: 14rem;
     height: 7rem;
     background-color: var(--creme);
-    box-shadow: 0 0 5px 1px var(--blue-tr);
+    box-shadow: 0 0 5px 1px var(--brown-tr);
     border-radius: 1rem;
     position: relative;
 }

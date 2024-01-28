@@ -4,7 +4,7 @@ main{
 }
 
 h3{
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 0.5rem 0 ;
 }
 
@@ -36,7 +36,7 @@ p{
 }
 
 .free-star{
-    width: 1.5rem;
+    width: 1.2rem;
 }
 
 .right{
@@ -79,6 +79,7 @@ p{
 .inline{
     display: flex;
     align-items: center;
+    padding: 0.2rem 0.4rem;
 }
 
 .inline-star{

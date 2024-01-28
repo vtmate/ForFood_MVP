@@ -6,7 +6,8 @@ main {
 h1{
     font-size: 1.3rem;
     margin-left: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
+    margin-top: 0.2rem;
 }
 
 .noitems{
@@ -20,7 +21,7 @@ h1{
 }
 
 .hidden{
-    display: none;
+    display: none !important;
 }
 
 .noitems h2{
@@ -29,7 +30,8 @@ h1{
 }
 
 .product{
-    margin: 0rem 1rem 0.5rem 1rem;
+    margin: 0rem 0.5rem 0.5rem 0.5rem;
+    width: 13rem;
 }
 
 .items{
@@ -51,7 +53,8 @@ h1{
 }
 
 .cur-shop-p{
-    width: 5rem;
+    width: 7rem;
+    font-size: 1.3rem;
 }
 
 .cont-img, .arrow{
@@ -71,11 +74,31 @@ h1{
 }
 
 .paying{
-    padding: 0.5rem;
+    padding: 0.2rem 1.4rem;
     text-align: center;
     border: none;
 }
 
 .paying:hover{
     cursor: pointer;
+}
+
+.allstar{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-left: 0.2rem;
+}
+
+.sum{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.product-img{
+    margin-left: 2.2rem;
+    margin-right: 1rem;
+}
+
+.name{
+    margin-bottom: 0;
 }
