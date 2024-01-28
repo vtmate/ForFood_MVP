@@ -163,3 +163,17 @@ a:active, a:visited, a{
     box-shadow: 0 0 2px 1px var(--blue-tr);
     background-color: var(--creme);
 }
+
+.scrollable{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 24.5rem;
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 0px;
+}
+  
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}

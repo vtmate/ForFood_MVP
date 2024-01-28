@@ -29,18 +29,46 @@
                 <img class="profile-pic" src="../assets/profile.svg" alt="">
             </header>
 
+            <div class="scrollable">
 
-            <main>
-                <div class="noitems bg">
-                    <h2>Még nincs semmi a kosaradban</h2>
+                <div class="cur-shop bg">
+                    <img class="cur-shop-img" src="" alt="">
+                    <p class="cur-shop-p"></p>
                 </div>
-                <div class="items hidden bg">
-                    <h1>Kosarad tartalma</h1>
-                    <div class="item-holder"></div>
+
+                <main>
+                    <div class="noitems bg">
+                        <h2>Még nincs semmi a kosaradban</h2>
+                    </div>
+                    <div class="items hidden bg">
+                        <h1>Kosarad tartalma</h1>
+                        <div class="item-holder"></div>
+                    </div>
+                </main>
+
+                <a class="cont-holder bg" href="">
+                    <h2>Vásárlás folytatása</h2>
+                    <img class="cont-img" src="" alt="">
+                    <img class="arrow" src="../assets/arrow.svg" alt="">
+                </a>
+
+                <div class="checkout bg">
+                    <div>
+                        <h2>Összesen:</h2>
+                        <div class="ch-star">
+                            <img src="../assets/progress-star.svg" alt="">
+                            <p class="allstar"></p>
+                        </div>
+                    </div>
+                    <button class="paying bg gradient">
+                        <p class="sum"></p>
+                        <h2>Fizetés</h2>
+                    </button>
                 </div>
-            </main>
 
-
+            </div>
+                
+                
             <div class="navbar gradient">
                 <a href="shops.html"><img src="../assets/shops.svg" alt=""></a>
                 <a href="goods.html"><img src="../assets/goods.svg" alt=""></a>
@@ -71,24 +99,34 @@
             var prices = {
                 'cappuccino': 1200,
                 'ice-coffee': 1300,
+                'biscuit': 400,
                 'cake': 1800,
                 'pudding': 1600,
                 'ice-cream': 1400
             };
 
             var loc = {
-                'cappuccino': ['kava-kavezo.png', 'Káva Kávézó'],
-                'ice-coffee': ['kava-kavezo.png', 'Káva Kávézó'],
-                'cake': ['sususutijei.png', 'Süsü Sütijei'],
-                'pudding': ['sususutijei.png', 'Süsü Sütijei'],
-                'ice-cream': ['sususutijei.png', 'Süsü Sütijei']
+                'cappuccino': ['kava-kavezo.png', 'Káva Kávézó', 'kavakavezo.html'],
+                'ice-coffee': ['kava-kavezo.png', 'Káva Kávézó', 'kavakavezo.html'],
+                'biscuit': ['kava-kavezo.png', 'Káva Kávézó', 'kavakavezo.html'],
+                'cake': ['sususutijei.png', 'Süsü Sütijei', 'sususutijei.html'],
+                'pudding': ['sususutijei.png', 'Süsü Sütijei', 'sususutijei.html'],
+                'ice-cream': ['sususutijei.png', 'Süsü Sütijei', 'sususutijei.html']
             };
+
+            const curImg = document.querySelector('.cur-shop-img');
+            curImg.src = '../assets/' + loc[cart[0]][0];
+
+            const contImg = document.querySelector('.cont-img');
+            contImg.src = '../assets/' + loc[cart[0]][0];
             
-            // const image = document.querySelector('.product-img');
-            // image.src = '../assets/' + g + '.png';
-            
-            // const priceTag = document.querySelector('.price-tag');
-            // priceTag.innerText = prices[g] + "Ft";
+            const curP = document.querySelector('.cur-shop-p');
+            curP.innerText = "Vásárlás itt: " + loc[cart[0]][1];
+
+            const contHolder = document.querySelector('.cont-holder');
+            contHolder.href = loc[cart[0]][2];
+
+            var priceSum = 0;
             
             cart.forEach(item => {
                 
@@ -111,16 +149,6 @@
                 const priceTag = document.createElement('p');
                 priceTag.classList.add('price-tag');
                 priceTag.innerText = prices[item] + "Ft";
-                // <div class="product bg">
-                //     <img class="product-img" src="" alt="">
-                //     <div class="product-info">
-                //         <h2 class="name"></h2>
-                //         <div class="price">
-                //             <img class="coin" src="../assets/coin.svg" alt="">
-                //             <p class="price-tag"></p>
-                //         </div>
-                //     </div>
-                // </div>
                 price.append(coin);
                 price.append(priceTag);
                 productInfo.append(name);
@@ -128,8 +156,21 @@
                 product.append(productImg);
                 product.append(productInfo);
                 itemHolder.append(product);
+
+                priceSum += prices[item];
             });
             
+            const sum = document.querySelector('.sum');
+            sum.innerText = priceSum + 'Ft';
+            
+            const allstar = document.querySelector('.allstar');
+            allstar.innerText = priceSum / 100;
+
+            const payingButton = document.querySelector('.paying');
+            payingButton.addEventListener('click', function(){
+                buyItems(priceSum/100);
+            })
+
             
             //lehet azt, hogy itt eltüntetem a menüsort (amikor visszamegyek a "boltba vásárolni, akkor ott is kellene tüntetni")
             //vagy bármilyen új lapra lépésnél rákérdezek, h űríti-e a kosár tartalmát (kivéve ha az adott "boltba" megy vissza)

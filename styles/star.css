@@ -1,0 +1,87 @@
+main{
+    margin: 0.4rem;
+    padding: 0.4rem;
+}
+
+h3{
+    font-size: 1rem;
+    margin: 0.5rem 0 ;
+}
+
+p{
+    font-size: 0.95rem;
+}
+
+.free-items{
+    margin-top: 1rem;
+}
+
+.free-button{
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    border: none;
+    background-color: var(--creme);
+    border-radius: inherit;
+    width: 100%;
+}
+
+.free-good{
+    width: 3rem;
+    margin-right: 0.5rem;
+}
+
+.free-button:hover{
+    cursor: pointer;
+}
+
+.free-star{
+    width: 1.5rem;
+}
+
+.right{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.right p{
+    font-size: 1.2rem;
+}
+
+.tiers img{
+    width: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.tiers div div{
+    display: flex;
+    align-items: center;
+}
+
+.gift{
+    margin-left: 1.4rem;
+    margin-right: 0.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.tier{
+    margin-top: 0.4rem;
+    padding: 0.4rem;
+    padding-top: 0;
+}
+
+.tier-star{
+    width: 1.2rem !important;
+}
+
+.inline{
+    display: flex;
+    align-items: center;
+}
+
+.inline-star{
+    margin-left: 0.2rem;
+    width: 1rem;
+}

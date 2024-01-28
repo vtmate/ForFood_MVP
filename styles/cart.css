@@ -1,17 +1,6 @@
 main {
     display: flex;
     justify-content: center;
-    overflow-x: hidden;
-    overflow-y: auto;
-    height: 24.5rem;
-}
-
-main::-webkit-scrollbar {
-    width: 0px;
-}
-  
-main::-webkit-scrollbar-thumb {
-    background-color: transparent;
 }
 
 h1{
@@ -44,5 +33,49 @@ h1{
 }
 
 .items{
-    margin-top: 1rem;
+    margin-top: 0.6rem;
+}
+
+.cur-shop, .cont-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-inline: 0.8rem;
+    padding: 1rem;
+}
+
+.cur-shop-img{
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+.cur-shop-p{
+    width: 5rem;
+}
+
+.cont-img, .arrow{
+    width: 3rem;
+}
+
+.checkout{
+    display: flex;
+    margin-inline: 0.8rem;
+    padding: 0.4rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ch-star{
+    display: flex;
+}
+
+.paying{
+    padding: 0.5rem;
+    text-align: center;
+    border: none;
+}
+
+.paying:hover{
+    cursor: pointer;
 }

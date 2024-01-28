@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STAR-ForFood-MVP</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/star.css">
     <link rel="icon" type="image/x-icon" href="../assets/kava-kavezo.png">
 </head>
 <body>
@@ -27,6 +28,66 @@
                 <img class="profile-pic" src="../assets/profile.svg" alt="">
             </header>
 
+            <div class="scrollable">
+                <main class="bg">
+                    <h2>Hozd le a csillagokat!</h2>
+                    <div class="inline">
+                        <p>Levásárolható: </p>
+                        <img class="inline-star" src="../assets/progress-star.svg" alt="">
+                        <p class="pay-points"></p>
+                    </div>
+                    <div class="free-items bg">
+                        <button onclick="getFreeItem(120)" class="free-button">
+                            <img class="free-good" src="../assets/cappuccino.png" alt="">
+                            <div>
+                                <h2>cappuccino</h2>
+                                <div class="right">
+                                    <img class="free-star" src="../assets/progress-star.svg" alt="">
+                                    <p>120</p>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <p class="all-points"></p>
+                    <div class="tiers">
+                        <div class="tier bg">
+                            <div>
+                                <img class="tier-star" src="../assets/progress-star.svg" alt="">
+                                <h3>Kulináris Kalandor - 100p</h3>
+                            </div>
+                            <div>
+                                <img class="gift" src="../assets/gift.svg" alt="">
+                                <p>ingyen +100 pont</p>
+                            </div>
+                            <div>
+                                <img class="gift" src="../assets/gift.svg" alt="">
+                                <p>Mostantól 1.5x annyi pont</p>
+                            </div>
+                        </div>
+                        <div class="tier bg">
+                            <div>
+                                <img class="tier-star" src="../assets/progress-star.svg" alt="">
+                                <h3>Desszert Díjas - 150 pont</h3>
+                            </div>
+                            <div>
+                                <img class="gift" src="../assets/gift.svg" alt="">
+                                <p>Mostantól 2x annyi pont</p>
+                            </div>
+                        </div>
+                        <div class="tier bg">
+                            <div>
+                                <img class="tier-star" src="../assets/progress-star.svg" alt="">
+                                <h3>Gasztronómiai Gróf - 200p</h3>
+                            </div>
+                            <div>
+                                <img class="gift" src="../assets/gift.svg" alt="">
+                                <p>Mostantól 2.5x annyi pont</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
 
             <div class="navbar gradient">
                 <a href="shops.html"><img src="../assets/shops.svg" alt=""></a>
@@ -41,5 +102,28 @@
     <img class="absolute circle" src="../assets/semicircle.svg" alt="">
 
     <script src="../app.js"></script>
+    <script>
+        function getFreeItem(price){
+            if(localPoints >= price){
+                localPoints -= price;
+                localStorage.setItem('points', localPoints);
+                console.log("megvetted");
+                payPoints.innerText = 'levásárolható csillagok: ' + localPoints;
+
+            } else {
+                console.log("nincs elég pénzed");
+            }
+        }
+
+        var localPoints = localStorage.getItem('points') || 20;
+        var allPoints = localStorage.getItem('allpoints') || 20;
+
+        const payPoints = document.querySelector('.pay-points');
+        payPoints.innerText = localPoints;
+
+        const allPointsP = document.querySelector('.all-points');
+        allPointsP.innerText = 'összes csillagod: ' + allPoints;
+
+    </script>
 </body>
 </html>
