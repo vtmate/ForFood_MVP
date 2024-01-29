@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>STAR-ForFood-MVP</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/star.css">
@@ -27,17 +27,22 @@
                 </div>
                 <img class="profile-pic" src="../assets/profile.svg" alt="">
             </header>
-
+            
             <div class="scrollable">
                 <main class="bg">
-                    <h2>Hozd le a csillagokat!</h2>
+                    <div class="inline">
+                        <p>Összes csillagod: </p>
+                        <img class="inline-star" src="../assets/progress-star.svg" alt="">
+                        <p class="all-points"></p>
+                    </div>
                     <div class="inline">
                         <p>Levásárolható: </p>
                         <img class="inline-star" src="../assets/progress-star.svg" alt="">
                         <p class="pay-points"></p>
                     </div>
-                    <div class="free-items bg">
-                        <button onclick="getFreeItem(80)" class="free-button">
+                    <h2 class="h2">Hozd le a csillagokat!</h2>
+                    <div class="free-items">
+                        <button onclick="getFreeItem(80)" class="free-button bg">
                             <img class="free-good" src="../assets/biscuit.png" alt="">
                             <div>
                                 <h2>biscuit</h2>
@@ -47,13 +52,19 @@
                                 </div>
                             </div>
                         </button>
+                        <button onclick="getFreeItem(80)" class="free-button bg">
+                            <img class="free-good" src="../assets/pudding.png" alt="">
+                            <div>
+                                <h2>pudding</h2>
+                                <div class="right">
+                                    <img class="free-star" src="../assets/progress-star.svg" alt="">
+                                    <p>120</p>
+                                </div>
+                            </div>
+                        </button>
                     </div>
 
-                    <div class="inline bg">
-                        <p>Összes csillagod: </p>
-                        <img class="inline-star" src="../assets/progress-star.svg" alt="">
-                        <p class="all-points"></p>
-                    </div>
+                    <h2 class="h2">Lépj szintet!</h2>
                     <div class="tiers">
                         <div class="tier bg">
                             <div>
@@ -82,7 +93,7 @@
                         <div class="tier bg">
                             <div>
                                 <img class="tier-star" src="../assets/progress-star.svg" alt="">
-                                <h3>Gasztronómiai Gróf - csillag</h3>
+                                <h3>Gasztronómiai Gróf - 200 csillag</h3>
                             </div>
                             <div>
                                 <img class="gift" src="../assets/gift.svg" alt="">

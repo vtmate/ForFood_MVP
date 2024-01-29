@@ -13,7 +13,7 @@ p{
 }
 
 .free-items{
-    margin-top: 1rem;
+    margin-top: 0.4rem;
 }
 
 .free-button{
@@ -22,8 +22,8 @@ p{
     padding: 0.2rem 0.5rem;
     border: none;
     background-color: var(--creme);
-    border-radius: inherit;
     width: 100%;
+    margin-bottom: 0.4rem;
 }
 
 .free-good{
@@ -78,6 +78,7 @@ p{
 
 .inline{
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 0.2rem 0.4rem;
 }
@@ -85,4 +86,8 @@ p{
 .inline-star{
     margin-left: 0.2rem;
     width: 1rem;
+}
+
+.h2{
+    margin-top: 1rem;
 }
