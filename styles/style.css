@@ -109,6 +109,10 @@ header{
     align-items: center;
 }
 
+header:hover{
+    cursor: pointer;
+}
+
 .stars img{
     width: 1rem
 }

@@ -81,3 +81,8 @@ h2{
 .video img{
     opacity: 0.4;
 }
+
+.video p{
+    opacity: 0.6;
+    text-align: center;
+}

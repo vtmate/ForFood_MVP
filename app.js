@@ -15,18 +15,21 @@ function addToCart(){
 }
 
 function buyItems(priceSum){
-    var allpoints = localStorage.getItem('points') || 40;
+    var allpoints = localStorage.getItem('allpoints') || 40;
     allpoints = parseInt(allpoints) + parseInt(priceSum);
     localStorage.setItem('allpoints', allpoints);
     if(allpoints/2 > 100){
         progress.style.width = '100%';
     } else {
         progress.style.width = allpoints/2 + '%';
+        console.log(allpoints);
     }
-
+    
     var points = localStorage.getItem('points') || 40;
     points = parseInt(points) + parseInt(priceSum);
     localStorage.setItem('points', points);
+
+    localStorage.setItem('cart', JSON.stringify([]));
 }
 
 const progress = document.querySelector('.progress');
@@ -44,3 +47,18 @@ reset.classList.add('reset');
 reset.addEventListener("click", resetPage);
 reset.innerText = "Reset";
 content.append(reset);
+
+const header = document.querySelector('header');
+header.addEventListener('click', function() {
+
+    
+    var currentPath = window.location.pathname;
+    var fileName = currentPath.split('/').pop();
+    console.log(fileName);
+
+    if(fileName == 'index.html'){
+        window.location = 'html/star.html';
+    } else {
+        window.location = 'star.html';
+    }
+})
