@@ -29,75 +29,83 @@
             </header>
             
             <div class="scrollable">
-                <main class="bg">
-                    <div class="inline">
-                        <p>Összes csillagod: </p>
-                        <img class="inline-star" src="../assets/progress-star.svg" alt="">
-                        <p class="all-points"></p>
-                    </div>
-                    <div class="inline">
-                        <p>Levásárolható: </p>
-                        <img class="inline-star" src="../assets/progress-star.svg" alt="">
-                        <p class="pay-points"></p>
-                    </div>
-                    <h2 class="h2">Hozd le a csillagokat!</h2>
-                    <div class="free-items">
-                        <button onclick="getFreeItem(80)" class="free-button bg">
-                            <img class="free-good" src="../assets/biscuit.png" alt="">
-                            <div>
-                                <h2>biscuit</h2>
-                                <div class="right">
-                                    <img class="free-star" src="../assets/progress-star.svg" alt="">
-                                    <p>80</p>
+                <main>
+                    <div class="free-holder bg">
+                        <h2>Hozd le a csillagokat!</h2>
+                        <p class="explanation">Váltsd be csillagjaidat ingyenes termékekre!</p>
+                        <div class="inline">
+                            <p>Levásárolható: </p>
+                            <img class="inline-star" src="../assets/progress-star.svg" alt="">
+                            <p class="pay-points"></p>
+                        </div>
+                        <div class="free-items">
+                            <button onclick="getFreeItem(80)" class="free-button bg">
+                                <img class="free-good" src="../assets/biscuit.png" alt="">
+                                <div>
+                                    <h2>biscuit</h2>
+                                    <div class="right">
+                                        <img class="free-star" src="../assets/progress-star.svg" alt="">
+                                        <p>80</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </button>
-                        <button onclick="getFreeItem(80)" class="free-button bg">
-                            <img class="free-good" src="../assets/pudding.png" alt="">
-                            <div>
-                                <h2>pudding</h2>
-                                <div class="right">
-                                    <img class="free-star" src="../assets/progress-star.svg" alt="">
-                                    <p>120</p>
+                                <div class="reedem gradient">csillagok beváltása</div>
+                            </button>
+                            <button onclick="getFreeItem(120)" class="free-button bg">
+                                <img class="free-good" src="../assets/pudding.png" alt="">
+                                <div>
+                                    <h2>pudding</h2>
+                                    <div class="right">
+                                        <img class="free-star" src="../assets/progress-star.svg" alt="">
+                                        <p>120</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </button>
+                                <div class="reedem gradient correct">csillagok beváltása</div>
+                            </button>
+                        </div>
                     </div>
 
-                    <h2 class="h2">Lépj szintet!</h2>
-                    <div class="tiers">
-                        <div class="tier bg">
-                            <div>
-                                <img class="tier-star" src="../assets/progress-star.svg" alt="">
-                                <h3>Kulináris Kalandor - 100 csillag</h3>
-                            </div>
-                            <div>
-                                <img class="gift" src="../assets/gift.svg" alt="">
-                                <p>ingyen +100 csillag</p>
-                            </div>
-                            <div>
-                                <img class="gift" src="../assets/gift.svg" alt="">
-                                <p>Mostantól 1.5x annyi csillag</p>
-                            </div>
+                    <div class="free-holder bg">
+                        <h2>Lépj szintet!</h2>
+                        <p class="explanation">Érj el minél magasabb rangot az eddig elért pontjaid alapján és élvezd az ajándékokat!</p>
+                        <div class="inline">
+                            <p>Összes csillagod: </p>
+                            <img class="inline-star" src="../assets/progress-star.svg" alt="">
+                            <p class="all-points"></p>
                         </div>
-                        <div class="tier bg">
-                            <div>
-                                <img class="tier-star" src="../assets/progress-star.svg" alt="">
-                                <h3>Desszert Díjas - 150 csillag</h3>
+                        <div class="tiers">
+                            <div class="tier bg">
+                                <div>
+                                    <img class="tier-star" src="../assets/progress-star.svg" alt="">
+                                    <h3>Kulináris Kalandor - 100 csillag</h3>
+                                </div>
+                                <div>
+                                    <img class="gift" src="../assets/gift.svg" alt="">
+                                    <p>ingyen +100 csillag</p>
+                                </div>
+                                <div>
+                                    <img class="gift" src="../assets/gift.svg" alt="">
+                                    <p>Mostantól 1.5x annyi csillag</p>
+                                </div>
                             </div>
-                            <div>
-                                <img class="gift" src="../assets/gift.svg" alt="">
-                                <p>Mostantól 2x annyi pont</p>
+                            <div class="tier bg">
+                                <div>
+                                    <img class="tier-star" src="../assets/progress-star.svg" alt="">
+                                    <h3>Desszert Díjas - 150 csillag</h3>
+                                </div>
+                                <div>
+                                    <img class="gift" src="../assets/gift.svg" alt="">
+                                    <p>Mostantól 2x annyi pont</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tier bg">
-                            <div>
-                                <img class="tier-star" src="../assets/progress-star.svg" alt="">
-                                <h3>Gasztronómiai Gróf - 200 csillag</h3>
-                            </div>
-                            <div>
-                                <img class="gift" src="../assets/gift.svg" alt="">
-                                <p>Mostantól 2.5x annyi csillag</p>
+                            <div class="tier bg">
+                                <div>
+                                    <img class="tier-star" src="../assets/progress-star.svg" alt="">
+                                    <h3>Gasztronómiai Gróf - 200 csillag</h3>
+                                </div>
+                                <div>
+                                    <img class="gift" src="../assets/gift.svg" alt="">
+                                    <p>Mostantól 2.5x annyi csillag</p>
+                                </div>
                             </div>
                         </div>
                     </div>

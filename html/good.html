@@ -30,6 +30,13 @@
             </header>
 
             <main>
+                <div class="go-back"><img src="../assets/arrow.svg" alt=""></div>
+                <div class="popup bg inv">
+                    <p>Sikeresen kosárba helyezve</p>
+                    <a href="cart.html">
+                        <img class="close" src="../assets/close.svg" alt="">
+                    </a>
+                </div>
                 <div class="product-holder">
                     <div class="product">
                         <img class="product-img" src="" alt="">
@@ -56,9 +63,12 @@
                             <p class="star-points"></p>
                             <img src="../assets/progress-star.svg" alt="">
                         </div>
-                        <a href="cart.html" class="cart-add gradient-tr">
+                        <div class="cart-add gradient-tr">
                             <img class="cart-add-img" src="../assets/cart-add.png" alt="">
-                        </a>
+                        </div>
+                        <!-- <a href="cart.html" class="cart-add gradient-tr">
+                            <img class="cart-add-img" src="../assets/cart-add.png" alt="">
+                        </a> -->
                     </div>
                 </div>
             </main>
@@ -98,12 +108,12 @@
         };
 
         var loc = {
-            'cappuccino': ['kava-kavezo.png', 'Káva Kávézó'],
-            'ice-coffee': ['kava-kavezo.png', 'Káva Kávézó'],
-            'biscuit': ['kava-kavezo.png', 'Káva Kávézó'],
-            'cake': ['sususutijei.png', 'Süsü Sütijei'],
-            'pudding': ['sususutijei.png', 'Süsü Sütijei'],
-            'ice-cream': ['sususutijei.png', 'Süsü Sütijei']
+            'cappuccino': ['kava-kavezo.png', 'Káva Kávézó', 'kavakavezo.html'],
+            'ice-coffee': ['kava-kavezo.png', 'Káva Kávézó', 'kavakavezo.html'],
+            'biscuit': ['kava-kavezo.png', 'Káva Kávézó', 'kavakavezo.html'],
+            'cake': ['sususutijei.png', 'Süsü Sütijei', 'sususutijei.html'],
+            'pudding': ['sususutijei.png', 'Süsü Sütijei', 'sususutijei.html'],
+            'ice-cream': ['sususutijei.png', 'Süsü Sütijei', 'sususutijei.html']
         };
 
         const image = document.querySelector('.product-img');
@@ -121,10 +131,20 @@
         const starPoints = document.querySelector('.star-points');
         const starPoint = prices[g] / 100;
         starPoints.innerText = starPoint;
+        
+        const goBack = document.querySelector('.go-back');
+        goBack.addEventListener('click', function(){
+            window.history.back();
+        })
 
+        const popup = document.querySelector('.popup');
+        
         const cartAdd = document.querySelector('.cart-add');
-        cartAdd.addEventListener('click', addToCart);
-
+        cartAdd.addEventListener('click', function(){
+            popup.classList.remove('inv');
+            addToCart();
+        })
+        
     </script>
 </body>
 </html>

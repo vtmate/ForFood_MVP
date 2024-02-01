@@ -30,6 +30,12 @@
             </header>
 
             <div class="scrollable">
+                <div class="popup inv bg">
+                    <p>Sikeresen megvásárolva</p>
+                    <a href="cart.html">
+                        <img class="close" src="../assets/close.svg" alt="">
+                    </a>
+                </div>
 
                 <div class="cur-shop bg items hidden">
                     <img class="cur-shop-img" src="" alt="">
@@ -60,7 +66,7 @@
                             <p class="allstar"></p>
                         </div>
                     </div>
-                    <button class="paying bg gradient">
+                    <button class="paying gradient">
                         <p class="sum"></p>
                         <h2>Fizetés</h2>
                     </button>
@@ -167,8 +173,12 @@
             const allstar = document.querySelector('.allstar');
             allstar.innerText = priceSum / 100;
 
+            const popup = document.querySelector('.popup');
+
             const payingButton = document.querySelector('.paying');
             payingButton.addEventListener('click', function(){
+                popup.classList.remove('inv');
+
                 buyItems(priceSum/100);
             })
 

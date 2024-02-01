@@ -2,6 +2,7 @@ main{
     margin-inline: 0.6rem;
     margin-top: 1rem;
     padding-top: 0.2em;
+    position: relative;
 }
 
 .head{

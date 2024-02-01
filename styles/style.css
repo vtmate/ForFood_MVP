@@ -11,7 +11,9 @@
     --yellow-tr: #fec95784;
     --brown: #4E2A07;
     --brown-tr: #4e2b0718;
+    --brown-tr2: #4e2b075d;
     /* --creme: #FCF1DA; */
+    --creme-s: #fffbf2;
     --creme: #fffbf2ba;
     --white: #FBFBFB;
 
@@ -29,6 +31,7 @@
 .gradient{
     background: rgb(255,186,122);
     background: linear-gradient(32deg, rgba(255,186,122,1) 20%, rgba(255,214,129,1) 55%, rgba(255,232,184,1) 100%);
+    box-shadow: 0 0 2px 1px var(--brown-tr2);
 }
 
 .gradient-tr{
@@ -192,3 +195,53 @@ a:active, a:visited, a{
 .scrollable::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
+
+.go-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px var(--brown-tr);
+}
+
+.go-back img{
+    transform: rotate(180deg);
+    width: 2rem;
+}
+
+.inv{
+    display: none;
+}
+
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 4rem;
+    width: 12rem;
+    padding: 0.5rem;
+    font-weight: 600;
+    opacity: 0.95;
+    background-color: var(--creme-s);
+    text-align: center;
+    font-size: 1.4rem;
+    z-index: 2;
+}
+
+.close{
+    position: absolute;
+    top: -0.3rem;
+    right: -0.3rem;
+    width: 1.3rem;
+    padding: 0.2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px var(--brown-tr);
+    background-color: var(--creme-s);
+}
+
+/* .close:hover{
+    cursor: pointer;
+} */

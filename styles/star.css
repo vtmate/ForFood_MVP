@@ -1,6 +1,5 @@
 main{
     margin: 0.4rem;
-    padding: 0.4rem;
 }
 
 h3{
@@ -14,6 +13,7 @@ p{
 
 .free-items{
     margin-top: 0.4rem;
+    margin-bottom: -0.3rem;
 }
 
 .free-button{
@@ -81,6 +81,7 @@ p{
     justify-content: center;
     align-items: center;
     padding: 0.2rem 0.4rem;
+    margin: 1rem 0;
 }
 
 .inline-star{
@@ -88,6 +89,25 @@ p{
     width: 1rem;
 }
 
-.h2{
-    margin-top: 1rem;
+.reedem{
+    margin-left: 1.4rem;
+    width: 4rem;
+    padding: 0.2rem 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+}
+
+.correct{
+    margin-left: 0.6rem;
+}
+
+.explanation{
+    margin-top: 0.2rem;
+    line-height: 0.9rem;
+    font-size: 0.85rem;
+}
+
+.free-holder{
+    padding: 0.4rem;
+    margin-bottom: 0.4rem;
 }
