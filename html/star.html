@@ -30,6 +30,20 @@
             
             <div class="scrollable">
                 <main>
+                    <div class="popup inv bg succ">
+                        <div class="cover"></div>
+                        <p>Sikeresen megvásárolva</p>
+                        <a href="star.html">
+                            <img class="close" src="../assets/close.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="popup inv bg unsucc">
+                        <div class="cover"></div>
+                        <p>Sajnos nincs elég csillagod</p>
+                        <a href="star.html">
+                            <img class="close" src="../assets/close.svg" alt="">
+                        </a>
+                    </div>
                     <div class="free-holder bg">
                         <h2>Hozd le a csillagokat!</h2>
                         <p class="explanation">Váltsd be csillagjaidat ingyenes termékekre!</p>
@@ -130,11 +144,10 @@
             if(localPoints >= price){
                 localPoints -= price;
                 localStorage.setItem('points', localPoints);
-                console.log("megvetted");
                 payPoints.innerText = localPoints;
-
+                succ.classList.remove('inv');
             } else {
-                console.log("nincs elég pénzed");
+                unsucc.classList.remove('inv');
             }
         }
 
@@ -146,6 +159,9 @@
 
         const allPointsP = document.querySelector('.all-points');
         allPointsP.innerText = allPoints;
+
+        const succ = document.querySelector('.succ');
+        const unsucc = document.querySelector('.unsucc');
 
     </script>
 </body>

@@ -229,6 +229,15 @@ a:active, a:visited, a{
     text-align: center;
     font-size: 1.4rem;
     z-index: 2;
+    animation-name: example;
+    animation-duration: 0.5s;
+}
+
+@keyframes example {
+    0%   {scale: 0;}
+    25%  {scale: 1.1;}
+    50%  {scale: 0.9}
+    100% {scale: 1;}
 }
 
 .close{
@@ -242,6 +251,16 @@ a:active, a:visited, a{
     background-color: var(--creme-s);
 }
 
-/* .close:hover{
-    cursor: pointer;
-} */
+.cover{
+    position: fixed;
+    top: -20rem;
+    left: -10rem;
+    width: 35rem;
+    height: 40rem;
+}
+
+.popup p{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+

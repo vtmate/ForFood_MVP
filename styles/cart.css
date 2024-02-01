@@ -107,3 +107,7 @@ h1{
 .scrollable{
     position: relative;
 }
+
+.popup{
+    bottom: 50%;
+}
