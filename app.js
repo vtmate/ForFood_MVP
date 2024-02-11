@@ -1,7 +1,7 @@
 function resetPage(){
-    localStorage.setItem('points', 40);
-    localStorage.setItem('allpoints', 40)
-    progress.style.width = 20 + '%';
+    localStorage.setItem('points', 80);
+    localStorage.setItem('allpoints', 80)
+    progress.style.width = 40 + '%';
     localStorage.setItem('cart', []);
     location.reload();
 }
@@ -15,7 +15,7 @@ function addToCart(){
 }
 
 function buyItems(priceSum){
-    var allpoints = localStorage.getItem('allpoints') || 40;
+    var allpoints = localStorage.getItem('allpoints') || 80;
     allpoints = parseInt(allpoints) + parseInt(priceSum);
     localStorage.setItem('allpoints', allpoints);
     if(allpoints/2 > 100){
@@ -25,7 +25,7 @@ function buyItems(priceSum){
         console.log(allpoints);
     }
     
-    var points = localStorage.getItem('points') || 40;
+    var points = localStorage.getItem('points') || 80;
     points = parseInt(points) + parseInt(priceSum);
     localStorage.setItem('points', points);
 
@@ -33,7 +33,7 @@ function buyItems(priceSum){
 }
 
 const progress = document.querySelector('.progress');
-var allpoints = localStorage.getItem('allpoints') || 40;
+var allpoints = localStorage.getItem('allpoints') || 80;
 if(allpoints/2 > 100){
     progress.style.width = '100%';
 } else {
