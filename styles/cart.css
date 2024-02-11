@@ -110,4 +110,9 @@ h1{
 
 .popup{
     bottom: 50%;
+    height: 6rem;
+}
+
+.received{
+    margin-top: 0.4rem;
 }

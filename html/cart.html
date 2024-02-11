@@ -31,10 +31,11 @@
 
             <div class="popup inv bg">
                 <div class="cover"></div>
-                <p>Sikeresen megvásárolva</p>
+                <p>Sikeresen megvásárolva,</p>
                 <a href="cart.html">
                     <img class="close" src="../assets/close.svg" alt="">
                 </a>
+                <p class="received bg gradient-tr"></p>
             </div>
             <div class="scrollable">
 
@@ -179,12 +180,11 @@
             payingButton.addEventListener('click', function(){
                 popup.classList.remove('inv');
 
-                buyItems(priceSum/100);
+                buyItems(priceSum / 100);
             })
 
-            
-            //lehet azt, hogy itt eltüntetem a menüsort (amikor visszamegyek a "boltba vásárolni, akkor ott is kellene tüntetni")
-            //vagy bármilyen új lapra lépésnél rákérdezek, h űríti-e a kosár tartalmát (kivéve ha az adott "boltba" megy vissza)
+            const received = document.querySelector('.received');
+            received.innerText = "szereztél " + (priceSum / 100) + " csillagot!"
         }
     </script>
 </body>
