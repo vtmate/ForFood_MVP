@@ -116,6 +116,10 @@ header:hover{
     cursor: pointer;
 }
 
+.margin-top{
+    margin-top: 1rem;
+}
+
 .stars img{
     width: 1rem
 }
